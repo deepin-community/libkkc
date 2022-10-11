@@ -1,0 +1,25 @@
+From: Daiki Ueno <ueno@gnu.org>
+Date: Tue, 28 Mar 2017 14:57:47 +0200
+Subject: build: Fix compile error with Vala 0.36
+
+Applied-Upstream: commit:253fb0673a3e98cfc5e90c70e794f9786f8e30f4
+
+With this commit: https://git.gnome.org/browse/vala/commit/?id=73b9e4b4
+Vala introduced a stricter checks for constructor chain-ups.
+---
+ libkkc/key-event.vala | 2 +-
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+diff --git a/libkkc/key-event.vala b/libkkc/key-event.vala
+index 0baa85c..6e28aa6 100644
+--- a/libkkc/key-event.vala
++++ b/libkkc/key-event.vala
+@@ -148,7 +148,7 @@ namespace Kkc {
+                     throw new KeyEventFormatError.PARSE_FAILED (
+                         "unknown keyval %s", _name);
+             }
+-            from_x_event (_keyval, 0, _modifiers);
++            this.from_x_event (_keyval, 0, _modifiers);
+         }
+ 
+         /**

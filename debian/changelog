@@ -1,0 +1,122 @@
+libkkc (0.3.5-7+u001) UNRELEASED; urgency=medium
+
+  * update
+
+ -- Debian Input Method Team <debian-input-method@lists.debian.org>  Mon, 25 Apr 2022 10:57:24 +0800
+
+libkkc (0.3.5-7) unstable; urgency=high
+
+  * Team upload.
+  * Upload to unstable.
+
+ -- Boyuan Yang <byang@debian.org>  Thu, 14 Nov 2019 17:08:16 -0500
+
+libkkc (0.3.5-7~exp1) experimental; urgency=medium
+
+  * Team upload.
+  * debian/control:
+    + Install gobject-introspection data into a new package
+      gir1.2-kkc-1.0.
+
+ -- Boyuan Yang <byang@debian.org>  Wed, 13 Nov 2019 20:41:59 -0500
+
+libkkc (0.3.5-6) unstable; urgency=medium
+
+  * Team upload.
+  * debian/control:
+    + Bump Standards-Version to 4.4.1.
+    + Bump debhelper compat to v12.
+    + Update build-dependencies and migrate to
+      python3.
+  * debian/patches:
+    + Add patch to migrate to python3.
+      (Closes: #943155)
+    + Backport upstream patches to fix FTBFS with newer
+      Valac.
+
+ -- Boyuan Yang <byang@debian.org>  Wed, 13 Nov 2019 20:10:15 -0500
+
+libkkc (0.3.5-4) unstable; urgency=medium
+
+  * Team upload.
+  * Rebuild against gcc 8.
+  * debian/control:
+    + Bump Standards-Version to 4.2.1.
+    + Update Vcs fields and use the repo under input-method-team.
+
+ -- Boyuan Yang <byang@debian.org>  Thu, 13 Sep 2018 14:13:03 -0400
+
+libkkc (0.3.5-3) unstable; urgency=medium
+
+  * Team upload.
+  * debian: Apply "wrap-and-sort" for unified format.
+  * debian/control:
+    - Use debian-input-method@lists.d.o in maintainer field.
+      Closes: #899955.
+    - Use "Optional" priority instead of deprecated "Extra".
+    - Use GitHub project for homepage field.
+    - Use Salsa repo for Vcs fields. Closes: #886513.
+    - Bump debhelper compat to v11.
+    - Bump Standards-Version to 4.1.4.
+    - Drop old -dbg package entries.
+    - Limit Build-dep libmarisa version to ensure rebuild against
+      new version of marisa.
+  * debian/copyright:
+    - Add info about my contribution.
+    - Update homepage information.
+  * debian/patches:
+    - Refresh patches.
+    - Add a patch from upstream to fix memory leak in key-event.vala.
+  * debian/rules:
+    - Rewrite dh_strip --dbgsym-migration as needed.
+  * debian/watch:
+    - Rewrite with v4 format.
+    - Watch upstream release at GitHub repository.
+
+ -- Boyuan Yang <073plan@gmail.com>  Thu, 07 Jun 2018 15:05:56 +0800
+
+libkkc (0.3.5-2) unstable; urgency=medium
+
+  [ Jeremy Bicha ]
+  * Fix build with vala 0.36 (Closes: #871187)
+
+  [ Mitsuya Shibata ]
+  * okuri-gana.patch: exec quilt reresh
+  * Bump Standards-Version to 4.0.0
+  * debian/control: fix lintian vcs-field-uses-insecure-uri
+
+ -- Mitsuya Shibata <mty.shibata@gmail.com>  Sun, 13 Aug 2017 14:37:25 +0900
+
+libkkc (0.3.5-1) unstable; urgency=medium
+
+  * New upsteam release
+    * debian/watch: move upstream repository to github
+    * debian/rules: make sure to exec autogen.sh
+    * debian/control: add skkdic-extra to Recommends
+    * debian/copyright: cleanup for 0.3.5
+    * Bump Standards-Version to 3.9.6
+  * okuri-gana.patch: backport post 0.3.5 patch
+
+ -- Mitsuya Shibata <mty.shibata@gmail.com>  Thu, 30 Apr 2015 23:06:50 +0900
+
+libkkc (0.3.4-1) unstable; urgency=medium
+
+  * New upsteam release
+  * Change Build-Depends from libgee-dev to libgee-0.8-dev (Closes: #753873)
+
+ -- Mitsuya Shibata <mty.shibata@gmail.com>  Tue, 16 Sep 2014 23:04:05 +0900
+
+libkkc (0.3.3-1) unstable; urgency=medium
+
+  * New upstream release.
+  * Use dh-autoreconf.
+
+ -- Osamu Aoki <osamu@debian.org>  Sun, 15 Jun 2014 23:27:57 +0900
+
+libkkc (0.3.2-1) unstable; urgency=low
+
+  * First upload to debian archive (Closes: #715232)
+  * Depends skkdic
+  * Update debian/license
+
+ -- Mitsuya Shibata <mty.shibata@gmail.com>  Wed, 26 Feb 2014 22:51:39 +0900

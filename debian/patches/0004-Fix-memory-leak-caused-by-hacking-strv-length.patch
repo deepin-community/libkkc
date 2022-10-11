@@ -1,0 +1,31 @@
+From: Weng Xuetian <wengxt@gmail.com>
+Date: Mon, 18 Dec 2017 17:24:51 -0800
+Subject: Fix memory leak caused by hacking strv length.
+
+Applied-Upstream: commit:7d365e11abb78cdab0e99d78059ebc1f4fa4d864
+
+generated _vala_array_free relies length to free the data correctly.
+Change the value to -1 will affect the behavior of _vala_array_free.
+---
+ libkkc/key-event.vala | 7 ++++++-
+ 1 file changed, 6 insertions(+), 1 deletion(-)
+
+diff --git a/libkkc/key-event.vala b/libkkc/key-event.vala
+index 6e28aa6..308bcf5 100644
+--- a/libkkc/key-event.vala
++++ b/libkkc/key-event.vala
+@@ -192,8 +192,13 @@ namespace Kkc {
+                 // newer valac thinks null in a fixed length array as
+                 // an empty string
+                 var array = elements.to_array ();
++                // Change length of strv may make vala no able to free it
++                // correctly. Save the length and restore it later.
++                var old_length = array.length;
+                 array.length = -1;
+-                return "(" + string.joinv (" ", array) + ")";
++                var key_string = "(" + string.joinv (" ", array) + ")";
++                array.length = old_length;
++                return key_string;
+             } else {
+                 return _base;
+             }

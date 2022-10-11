@@ -1,0 +1,29 @@
+From: Daiki Ueno <ueno@gnu.org>
+Date: Tue, 19 Jun 2018 14:16:21 +0200
+Subject: user-sentence-dictionary: Fix memleak
+
+Applied-Upstream: https://github.com/ueno/libkkc/commit/1a3e0298460b3a85fa504375c3e48369ece3b760
+
+Similar to commit 7d365e11.
+---
+ libkkc/user-sentence-dictionary.vala | 4 ++++
+ 1 file changed, 4 insertions(+)
+
+diff --git a/libkkc/user-sentence-dictionary.vala b/libkkc/user-sentence-dictionary.vala
+index 5ff9883..abfe3a9 100644
+--- a/libkkc/user-sentence-dictionary.vala
++++ b/libkkc/user-sentence-dictionary.vala
+@@ -258,9 +258,13 @@ namespace Kkc {
+             // Newer valac thinks null in a fixed length array as an
+             // empty string.
+             var array = input.to_array ();
++            // Change length of strv may make vala no able to free it
++            // correctly. Save the length and restore it later.
++            var old_length = array.length;
+             array.length = -1;
+             constraint_entries.set (string.joinv ("", array), constraint);
+             phrase_entries.set (string.joinv (" ", array), phrase);
++            array.length = old_length;
+             is_dirty = true;
+             return true;
+         }

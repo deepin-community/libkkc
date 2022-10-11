@@ -1,0 +1,8 @@
+okuri-gana.patch
+Build-with-vala-0.36.patch
+Don-t-translate-generated-file.patch
+0004-Fix-memory-leak-caused-by-hacking-strv-length.patch
+0005-tests-Fix-memleaks-in-tests.patch
+0006-user-sentence-dictionary-Fix-memleak.patch
+0007-build-Declare-creation-methods-of-abstract-classes-a.patch
+0005-Migrate-to-python3.patch
