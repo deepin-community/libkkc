@@ -1,8 +1,12 @@
-libkkc (0.3.5-7+u001) UNRELEASED; urgency=medium
+libkkc (0.3.5-7deepin) unstable; urgency=medium
 
+  [ Debian Input Method Team ]
   * update
 
- -- Debian Input Method Team <debian-input-method@lists.debian.org>  Mon, 25 Apr 2022 10:57:24 +0800
+  [ Yutao Meng ]
+  * Regulate version name
+
+ -- Yutao Meng <mengyutao@uniontech.com>  Tue, 21 Mar 2023 11:09:31 +0800
 
 libkkc (0.3.5-7) unstable; urgency=high
 
