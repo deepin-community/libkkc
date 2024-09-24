@@ -1,4 +1,5 @@
 libkkc.so.2 libkkc2 #MINVER#
+* Build-Depends-Package: libkkc-dev
  kkc_bigram_decoder_add_unknown_nodes@Base 0.3.2
  kkc_bigram_decoder_backward_search@Base 0.3.2
  kkc_bigram_decoder_build_trellis@Base 0.3.2
@@ -88,6 +89,7 @@ libkkc.so.2 libkkc2 #MINVER#
  kkc_decoder_decode_with_costs@Base 0.3.2
  kkc_decoder_get_type@Base 0.3.2
  kkc_dictionary_callback_return_get_type@Base 0.3.2
+ kkc_dictionary_error_get_type@Base 0.3.5
  kkc_dictionary_error_quark@Base 0.3.2
  kkc_dictionary_get_type@Base 0.3.2
  kkc_dictionary_list_add@Base 0.3.2
@@ -114,6 +116,7 @@ libkkc.so.2 libkkc2 #MINVER#
  kkc_key_event_filter_filter_key_event@Base 0.3.2
  kkc_key_event_filter_get_type@Base 0.3.2
  kkc_key_event_filter_reset@Base 0.3.2
+ kkc_key_event_format_error_get_type@Base 0.3.5
  kkc_key_event_format_error_quark@Base 0.3.2
  kkc_key_event_get_keycode@Base 0.3.2
  kkc_key_event_get_keyval@Base 0.3.2
@@ -154,6 +157,7 @@ libkkc.so.2 libkkc2 #MINVER#
  kkc_language_model_entry_dup@Base 0.3.2
  kkc_language_model_entry_free@Base 0.3.2
  kkc_language_model_entry_get_type@Base 0.3.2
+ kkc_language_model_error_get_type@Base 0.3.5
  kkc_language_model_error_quark@Base 0.3.2
  kkc_language_model_get@Base 0.3.2
  kkc_language_model_get_bos@Base 0.3.2
@@ -183,6 +187,7 @@ libkkc.so.2 libkkc2 #MINVER#
  kkc_metadata_file_set_filename@Base 0.3.2
  kkc_metadata_file_set_label@Base 0.3.2
  kkc_metadata_file_set_name@Base 0.3.2
+ kkc_metadata_format_error_get_type@Base 0.3.5
  kkc_metadata_format_error_quark@Base 0.3.2
  kkc_modifier_type_get_type@Base 0.3.2
  kkc_nicola_key_event_filter_construct@Base 0.3.2
@@ -247,6 +252,7 @@ libkkc.so.2 libkkc2 #MINVER#
  kkc_rule_metadata_set_filter@Base 0.3.2
  kkc_rule_metadata_set_priority@Base 0.3.2
  kkc_rule_new@Base 0.3.2
+ kkc_rule_parse_error_get_type@Base 0.3.5
  kkc_rule_parse_error_quark@Base 0.3.2
  kkc_rule_set_filter@Base 0.3.2
  kkc_rule_set_metadata@Base 0.3.2

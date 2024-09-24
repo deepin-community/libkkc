@@ -1,0 +1,11 @@
+libkkc/libkkc-internals.h
+libkkc/libkkc.h
+libkkc/libkkc.symbols
+libkkc/libkkc_la_vala.stamp
+tests/data/rules/default/
+tests/data/rules/kana/
+tests/data/rules/nicola/
+tests/lib/kkc-test.vapi
+tests/lib/libkkc-test.h
+tests/lib/libkkc_test_la_vala.stamp
+tools/kkc_vala.stamp
