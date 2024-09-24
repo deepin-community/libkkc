@@ -1,0 +1,3 @@
+usr/bin/kkc-package-data
+usr/lib/*/libkkc.la
+usr/share/libkkc/templates/libkkc-data/

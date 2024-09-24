@@ -1,12 +1,33 @@
-libkkc (0.3.5-8deepin) unstable; urgency=medium
+libkkc (0.3.5-10) unstable; urgency=medium
 
-  [ Debian Input Method Team ]
-  * update
+  * Team upload.
+  * debian/rules: Drop useless override of -Wl,--as-needed.
+  * debian/rules: Do not error on incompatible-pointer-types.
+    This fixes compatibility with GCC 14. (Closes: #1075177)
 
-  [ Yutao Meng ]
-  * Regulate version name
+ -- Boyuan Yang <byang@debian.org>  Sun, 28 Jul 2024 20:53:43 -0400
 
- -- Yutao Meng <mengyutao@uniontech.com>  Tue, 21 Mar 2023 11:09:31 +0800
+libkkc (0.3.5-9) unstable; urgency=medium
+
+  * Team upload.
+  * debian/control: Bump Standards-Version to 4.7.0.
+  * debian/control: Move package description body to source package section.
+  * debian/control: Use explicitly build-dependency dh-sequence-gir instead
+    of gobject-introspection.
+
+ -- Boyuan Yang <byang@debian.org>  Tue, 14 May 2024 16:12:48 -0400
+
+libkkc (0.3.5-8) unstable; urgency=medium
+
+  * Team upload
+  * Update d/libkkc2.symbols
+  * Clean up build changes to allow second build (closes: #1048815)
+  * Update debhelper version
+    - Bump to version 13
+    - Add debian/not-installed as a consequence
+  * Bump Standards-Version to 4.6.2
+
+ -- Gunnar Hjalmarsson <gunnarhj@debian.org>  Tue, 22 Aug 2023 20:56:17 +0200
 
 libkkc (0.3.5-7) unstable; urgency=high
 
